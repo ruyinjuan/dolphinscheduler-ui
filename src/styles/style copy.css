@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+:root {
+  /* === 科幻蓝色主题 === */
+
+  /* 主文本色 - 冷白色/青白色 */
+  --theme-dark-primary-text-color: rgba(241, 252, 255);
+
+  /* 面板背景 - 科幻渐变 */
+  --theme-dark-primary-plane-bg-color: linear-gradient(
+    180deg,
+    rgba(14, 43, 67, 0.94),
+    rgba(8, 24, 38, 0.78)
+  );
+
+  /* 边框色 - 青蓝边框 */
+  --theme-dark-border-color: rgba(125, 230, 255, 0.22);
+
+  /* === 新增科幻蓝色系 === */
+
+  /* 主色调 - 科技蓝 */
+  --theme-dark-blue-primary: #0ea5e9;
+  --theme-dark-blue-primary-light: #38bdf8;
+  --theme-dark-blue-primary-dark: #0284c7;
+
+  /* 青色/电光蓝 */
+  --theme-dark-cyan-accent: #22d3ee;
+  --theme-dark-cyan-glow: rgba(34, 211, 238, 0.4);
+
+  /* 深空蓝背景 */
+  --theme-dark-bg-deep: rgba(8, 24, 38, 0.95);
+  --theme-dark-bg-medium: rgba(14, 43, 67, 0.85);
+  --theme-dark-bg-light: rgba(56, 189, 248, 0.08);
+
+  /* 科幻边框变体 */
+  --theme-dark-border-light: rgba(125, 230, 255, 0.4);
+  --theme-dark-border-glow: rgba(34, 211, 238, 0.5);
+
+  /* 文字变体 */
+  --theme-dark-text-secondary: rgba(186, 230, 253);
+  --theme-dark-text-muted: rgba(125, 163, 192);
+
+  /* 发光效果 */
+  --theme-dark-glow-blue: 0 0 20px rgba(14, 165, 233, 0.3);
+  --theme-dark-glow-cyan: 0 0 30px rgba(34, 211, 238, 0.4);
+
+  /* 渐变背景 */
+  --theme-dark-gradient-panel: linear-gradient(
+    135deg,
+    rgba(14, 43, 67, 0.95) 0%,
+    rgba(8, 24, 38, 0.98) 100%
+  );
+  --theme-dark-gradient-glow: linear-gradient(
+    180deg,
+    rgba(14, 165, 233, 0.15) 0%,
+    transparent 50%
+  );
+
+  font-family:
+    'Sohne', 'Avenir Next', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  color: var(--theme-dark-primary-text-color);
+  background: var(--theme-dark-bg-deep);
+}
+
+button,
+input,
+textarea,
+a {
+  font: inherit;
+}
+
+#app {
+  height: 100%;
+}
+
+.mapboxgl-ctrl {
+  display: none !important;
+}

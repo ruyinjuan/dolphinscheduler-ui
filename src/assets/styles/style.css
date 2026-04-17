@@ -1,0 +1,128 @@
+@import "tailwindcss";
+@layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .writing-vertical {
+    writing-mode: vertical-lr;
+  }
+}
+
+:root {
+  /* === 科幻蓝色主题 === */
+
+  /* 主文本色 */
+  --theme-primary-text: rgba(241, 252, 255, 1);
+
+  /* 面板背景 */
+  --theme-primary-plane-bg: linear-gradient(
+    180deg,
+    rgba(14, 43, 67, 0.94),
+    rgba(8, 24, 38, 0.78)
+  );
+
+  /* 边框色 */
+  --theme-border: rgba(125, 230, 255, 0.22);
+
+  /* 主色调 */
+  --theme-blue-primary: #0ea5e9;
+  --theme-blue-primary-light: #38bdf8;
+  --theme-blue-primary-dark: #0284c7;
+
+  /* 青色 */
+  --theme-cyan-accent: #22d3ee;
+  --theme-cyan-glow: rgba(34, 211, 238, 0.4);
+
+  /* 背景 */
+  --theme-bg-deep: rgba(8, 24, 38, 0.95);
+  --theme-bg-medium: rgba(14, 43, 67, 0.85);
+  --theme-bg-light: rgba(56, 189, 248, 0.08);
+  --theme-bg-gradient: linear-gradient(
+    135deg,
+    rgba(14, 43, 67, 0.95) 0%,
+    rgba(8, 24, 38, 0.98) 100%
+  );
+  --theme-bg-gradient-hover: linear-gradient(
+    180deg,
+    rgba(12, 95, 134, 0.3),
+    rgba(11, 51, 57, 0.2)
+  );
+  --theme-bg-gradient-active: linear-gradient(
+    145deg,
+    rgba(10, 124, 192, 0.95),
+    rgba(7, 182, 236, 0.88)
+  );
+
+  /* 边框变体 */
+  --theme-border-light: rgba(125, 230, 255, 0.4);
+  --theme-border-glow: rgba(34, 211, 238, 0.5);
+  --theme-border-muted: rgba(125, 230, 255, 0.1);
+
+  /* 文字变体 */
+  --theme-text-secondary: rgba(186, 230, 253, 1);
+  --theme-text-muted: rgba(125, 163, 192, 1);
+
+  /* 发光 */
+  --theme-glow-blue: 0 0 20px rgba(14, 165, 233, 0.3);
+  --theme-glow-cyan: 0 0 30px rgba(34, 211, 238, 0.4);
+
+  /* 渐变 */
+  --theme-gradient-panel: linear-gradient(
+    135deg,
+    rgba(14, 43, 67, 0.95) 0%,
+    rgba(8, 24, 38, 0.98) 100%
+  );
+
+  --theme-gradient-glow: linear-gradient(
+    180deg,
+    rgba(14, 165, 233, 0.15) 0%,
+    transparent 50%
+  );
+
+  /* 基础尺寸 */
+  --theme-border-radius: 10px;
+  --theme-border-radius-small: 8px;
+  --theme-border-radius-tiny: 4px;
+
+  /* 字体 */
+  --theme-font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --theme-font-family-mono: "Maple Mono NF CN", "Fira Code", monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+  color: var(--theme-primary-text);
+  /* background: var(--theme-dark-bg-deep); */
+}
+
+button,
+input,
+textarea,
+a {
+  font: inherit;
+}
+
+#app {
+  height: 100%;
+}
+
+.mapboxgl-ctrl {
+  display: none !important;
+}

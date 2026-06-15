@@ -29,7 +29,7 @@ import {
 import { useThemeStore } from '@/store/theme/theme'
 import { useLocalesStore } from '@/store/locales/locales'
 import themeList from '@/themes'
-import {createNaiveThemeOverrides} from '@/styles/naiveThemeConfig'
+import { createNaiveThemeOverrides } from '@/styles/naiveThemeConfig'
 
 const App = defineComponent({
   name: 'App',
@@ -60,7 +60,8 @@ const App = defineComponent({
   render() {
     // const themeOverrides: GlobalThemeOverrides =
     //   themeList[this.currentTheme ? 'dark' : 'light']
-      const themeConfig = createNaiveThemeOverrides()
+    // alert(themeOverrides)
+    const themeConfig = createNaiveThemeOverrides()
     return (
       <NConfigProvider
         theme={this.currentTheme}

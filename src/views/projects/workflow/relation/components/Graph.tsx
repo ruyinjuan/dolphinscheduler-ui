@@ -86,19 +86,12 @@ const GraphChart = defineComponent({
 
           return `
             ${t('project.workflow.workflow_name')}：${name}<br/>
-            ${t(
-              'project.workflow.schedule_start_time'
-            )}：${scheduleStartTime}<br/>
+            ${t('project.workflow.schedule_start_time')}：${scheduleStartTime}<br/>
             ${t('project.workflow.schedule_end_time')}：${scheduleEndTime}<br/>
-            ${t('project.workflow.crontab_expression')}：${
-            crontab ? crontab : ' - '
-          }<br/>
-            ${t(
-              'project.workflow.workflow_publish_status'
-            )}：${workFlowPublishStatus}<br/>
-            ${t(
-              'project.workflow.schedule_publish_status'
-            )}：${schedulePublishStatus}<br/>
+            ${t('project.workflow.crontab_expression')}：${crontab ? crontab : ' - '}
+            <br/>
+            ${t('project.workflow.workflow_publish_status')}：${workFlowPublishStatus}<br/>
+            ${t('project.workflow.schedule_publish_status')}：${schedulePublishStatus}<br/>
           `
         }
       },
@@ -108,6 +101,9 @@ const GraphChart = defineComponent({
             name: item.name,
             itemStyle: {
               color: item.color
+            },
+            textStyle: {
+              color: '#fff'
             }
           }
         })
@@ -130,9 +126,9 @@ const GraphChart = defineComponent({
               let newStr = ''
               const str = val.data.name.split('')
 
-              for (let i = 0, s; (s = str[i++]); ) {
+              for (let i = 0, s; (s = str[i++]);) {
                 newStr += s
-                if (!(i % 10)) newStr += '\n'
+                if (!(i % 5)) newStr += '\n'
               }
 
               return newStr.length > 60 ? newStr.slice(0, 60) + '...' : newStr

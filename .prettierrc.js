@@ -15,39 +15,16 @@
  * limitations under the License.
  */
 
-* {
-  outline: 0;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  //scrollbar-width: none;
-  //-ms-overflow-style: none;
-  //::-webkit-scrollbar {
-  //  display: none;
-  //}
-}
-
-html,
-body,
-p,
-dl,
-dd,
-dt {
-  margin: 0;
-  padding: 0;
-}
-
-
-//滚动条
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(204, 204, 204, 0.2);
-  border-radius: 3px;
+module.exports = {
+  useTabs: false,
+  semi: false,
+  vueIndentScriptAndStyle: true,
+  singleQuote: true,
+  quoteProps: 'as-needed',
+  jsxBracketSameLine: false,
+  jsxSingleQuote: true,
+  arrowParens: 'always',
+  htmlWhitespaceSensitivity: 'strict',
+  endOfLine: 'lf',
+  trailingComma: 'none'
 }

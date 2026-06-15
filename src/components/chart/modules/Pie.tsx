@@ -45,7 +45,10 @@ const PieChart = defineComponent({
       },
       legend: {
         bottom: '0%',
-        left: 'center'
+        left: 'center',
+        textStyle: {
+          color: '#fff'
+        }
       },
       series: [
         {

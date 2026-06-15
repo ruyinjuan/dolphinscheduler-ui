@@ -157,6 +157,7 @@ export function createNaiveThemeOverrides() {
       borderFocus: `1px solid ${cyan}`,
       boxShadowFocus: "0 0 0 2px rgba(34, 211, 238, 0.18)",
       caretColor: cyan,
+      colorDisabled: "rgba(255, 255, 255, 0.1)"
     },
 
     Modal: {
@@ -180,6 +181,7 @@ export function createNaiveThemeOverrides() {
       tabTextColorBar: textMuted,
       barColor: cyan,
       paneTextColor: textPrimary,
+      tabColor: "rgba(14, 43, 67, 0.92)"
     },
 
     DataTable: {
@@ -188,9 +190,13 @@ export function createNaiveThemeOverrides() {
       borderColor: border,
       thTextColor: textSecondary,
       tdTextColor: textPrimary,
+      thColorModal: "rgba(14, 43, 67, 0.92)",
     },
     Checkbox: {
       borderRadius: tinyBorderRadius,
     },
+    Pagination: {
+      itemColorDisabled: 'rgba(56, 189, 248, 0.1)',
+    }
   };
 }

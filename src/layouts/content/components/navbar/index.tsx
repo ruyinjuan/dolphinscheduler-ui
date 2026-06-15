@@ -73,7 +73,7 @@ const Navbar = defineComponent({
   render() {
     return (
       <div class={styles.container}>
-        <Logo />
+        {/* <Logo /> */}
         <div class={styles.nav}>
           <NMenu
             value={this.menuKey}
@@ -96,7 +96,7 @@ const Navbar = defineComponent({
           <Theme />
           <Locales localesOptions={this.localesOptions} />
           <Timezone timezoneOptions={this.timezoneOptions} /> */}
-          <User userDropdownOptions={this.userDropdownOptions} />
+          {/* <User userDropdownOptions={this.userDropdownOptions} /> */}
         </div>
       </div>
     )

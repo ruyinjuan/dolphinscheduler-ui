@@ -81,6 +81,9 @@ const login = defineComponent({
         }
       } else {
         state.loginForm.ssoLoginUrl = ''
+        state.loginForm.userName = 'admin'
+        state.loginForm.userPassword = 'admin123456'
+        handleLogin()
       }
       handleRedirect()
     })

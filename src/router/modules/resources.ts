@@ -25,10 +25,44 @@ const components: { [key: string]: Component } = utils.mapping(modules)
 export default {
   path: '/resource',
   name: 'resource',
-  redirect: { name: 'file-manage' },
+  redirect: { name: 'resource-manage' },
   meta: { title: '资源中心' },
   component: () => import('@/layouts/content'),
   children: [
+    {
+      path: '/resource/resource-manage',
+      name: 'resource-manage',
+      component: components['resource-udf-resource'],
+      meta: {
+        title: '资源管理',
+        activeMenu: 'resource',
+        showSide: true,
+        auth: []
+      }
+    },
+    {
+      path: '/resource/resource-manage',
+      name: 'resource-sub-manage',
+      component: components['resource-udf-resource'],
+      meta: {
+        title: '资源管理',
+        activeMenu: 'resource',
+        activeSide: '/resource/resource-manage',
+        showSide: true,
+        auth: []
+      }
+    },
+    {
+      path: '/resource/function-manage',
+      name: 'function-manage',
+      component: components['resource-udf-function'],
+      meta: {
+        title: '函数管理',
+        activeMenu: 'resource',
+        showSide: true,
+        auth: []
+      }
+    },
     {
       path: '/resource/file-manage',
       name: 'file-manage',
@@ -96,40 +130,6 @@ export default {
         title: '文件创建',
         activeMenu: 'resource',
         activeSide: '/resource/file-manage',
-        showSide: true,
-        auth: []
-      }
-    },
-    {
-      path: '/resource/resource-manage',
-      name: 'resource-manage',
-      component: components['resource-udf-resource'],
-      meta: {
-        title: '资源管理',
-        activeMenu: 'resource',
-        showSide: true,
-        auth: []
-      }
-    },
-    {
-      path: '/resource/resource-manage',
-      name: 'resource-sub-manage',
-      component: components['resource-udf-resource'],
-      meta: {
-        title: '资源管理',
-        activeMenu: 'resource',
-        activeSide: '/resource/resource-manage',
-        showSide: true,
-        auth: []
-      }
-    },
-    {
-      path: '/resource/function-manage',
-      name: 'function-manage',
-      component: components['resource-udf-function'],
-      meta: {
-        title: '函数管理',
-        activeMenu: 'resource',
         showSide: true,
         auth: []
       }

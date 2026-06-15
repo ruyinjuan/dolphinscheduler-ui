@@ -228,10 +228,10 @@ export const tasksState = (t: any): ITaskStateConfig => ({
     isSpin: false,
     classNames: 'stop'
   },
-  FAILURE: {
+  FAILURE: { //失败
     id: 6,
     desc: `${t('project.workflow.failed')}`,
-    color: '#000000',
+    color: '#ccc',
     icon: CloseCircleOutlined,
     isSpin: false,
     classNames: 'failed'
@@ -345,10 +345,10 @@ export const workflowExecutionState = (
     isSpin: false,
     classNames: 'stop'
   },
-  FAILURE: {
+  FAILURE: { //失败
     id: 6,
     desc: `${t('project.workflow.failed')}`,
-    color: '#000000',
+    color: '#ccc',
     icon: CloseCircleOutlined,
     isSpin: false,
     classNames: 'failed'

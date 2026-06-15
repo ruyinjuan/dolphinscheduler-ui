@@ -42,6 +42,8 @@ export default defineConfig({
     }
   },
   server: {
+    port: 5174,      // 开发服务器端口
+    open: true,      // 是否自动打开浏览器
     proxy: {
       '/dolphinscheduler': {
         target: loadEnv('development', './').VITE_APP_DEV_WEB_URL,

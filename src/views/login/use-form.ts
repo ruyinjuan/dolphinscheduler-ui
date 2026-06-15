@@ -25,8 +25,8 @@ export function useForm() {
   const state = reactive({
     loginFormRef: ref(),
     loginForm: {
-      userName: '',
-      userPassword: '',
+      userName: 'admin',
+      userPassword: 'admin123456',
       ssoLoginUrl: ''
     },
     rules: {

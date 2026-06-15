@@ -134,9 +134,8 @@ const GanttChart = defineComponent({
             (item) => item.taskName === taskName
           )
           let str = `taskName : ${taskName}</br>`
-          str += `status : ${state[data[0].status as ITaskState].desc} (${
-            data[0].status
-          })</br>`
+          str += `status : ${state[data[0].status as ITaskState].desc} (${data[0].status
+            })</br>`
           str += `startTime : ${data[0].isoStart}</br>`
           str += `endTime : ${data[0].isoEnd}</br>`
           str += `duration : ${data[0].duration}</br>`
@@ -145,7 +144,10 @@ const GanttChart = defineComponent({
       },
       legend: {
         left: 150,
-        padding: [5, 5, 5, 5]
+        padding: [5, 5, 5, 5],
+        textStyle: {
+          color: '#fff'
+        }
       },
       dataZoom: [
         {
